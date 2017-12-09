@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#dade {
+				width: 1280px;
+			}
+			
+			#onexiao {
+				width: 1280px;
+				height: 45px;
+				background: #212123;
+				position: fixed;
+				z-index: 9999;
+				top: 0;
+			}
+			
+			#onexiao #twlogo {
+				margin-left: 38px;
+			}
+			
+			#onexiao #hml {
+				top: 10px;
+				left: 248px;
+				position: absolute;
+			}
+			
+			#onexiao #hml li {
+				float: left;
+				color: #FFFFFF;
+				margin: 0 33px;
+				font-size: 20px;
+				list-style: none;
+				cursor: pointer;
+			}
+			
+			#onexiao #hml li:hover {
+				color: orangered;
+			}
+			
+			#liebiao {
+				top: 0;
+				right: 30px;
+				width: 45px;
+				height: 45px;
+				background: black;
+				position: absolute;
+				cursor: pointer;
+			}
+			
+			#liebiao:hover #nml {
+				display: block;
+			}
+			
+			#liebiao #lie {
+				right: 0px;
+				position: absolute;
+			}
+			
+			#liebiao #nml {
+				right: 0px;
+				top: 45px;
+				width: 200px;
+				height: 400px;
+				background: black;
+				position: absolute;
+				display: none;
+				z-index: 999;
+			}
+			
+			#liebiao #nml li {
+				border-bottom: 1px solid gray;
+				line-height: 45px;
+				list-style: none;
+				color: #FFFFFF;
+			}
+			
+			#liebiao #nml li:hover {
+				color: orangered;
+			}
+			
+			#liebiao #nml #lastlis {
+				border: none;
+			}
+			
+			#blue {
+				width: 100%;
+				height: 100px;
+				background: #0096fd;
+				margin-top: 45px;
+			}
+			
+			#blue span {
+				line-height: 40px;
+				margin-left: 34px;
+				color: #FFFFFF;
+			}
+			
+			#blue #bone {
+				font-size: 22px;
+			}
+			
+			#blue input {
+				top: 80px;
+				left: 1000px;
+				width: 220px;
+				height: 40px;
+				border-radius: 15px;
+				border: none;
+				position: absolute;
+			}
+			#blue #sous{
+				top: 87px;
+				z-index: 99;
+				left: 1190px;
+				position: absolute;
+			}
+			#hui {
+				width: 100%;
+				height: 50px;
+				background: gainsboro;
+			}
+			
+			#hui span {
+				margin-left: 60px;
+				line-height: 50px;
+				color: gray;
+			}
+			
+			#timu {
+				margin: 0 auto;
+				width: 1240px;
+				height: 122px;
+				border-bottom: 1px solid gray;
+			}
+			
+			#timu span {
+				line-height: 70px;
+				font-size: 26px;
+			}
+			
+			#timu #tiul {
+				margin-left: 200px;
+			}
+			
+			#timu #tiul li {
+				margin: 0 60px;
+				float: left;
+				list-style: none;
+			}
+			
+			#qht {
+				margin: 0 auto;
+				width: 1200px;
+				height: 770px;
+				position: absolute;
+				position: relative;
+			}
+			
+			#qht #lefbtn {
+				top: 385px;
+				left: 0;
+				width: 30px;
+				height: 50px;
+				cursor: pointer;
+				position: absolute;
+				background: rgba(0, 0, 0, .5);
+				z-index: 999;
+			}
+			
+			#qht #lefbtn:hover {
+				background: orangered;
+			}
+			
+			#qht #rigbtn {
+				top: 385px;
+				right: 0;
+				width: 30px;
+				cursor: pointer;
+				position: absolute;
+				background: rgba(0, 0, 0, .5);
+				z-index: 999;
+			}
+			
+			#qht #rigbtn:hover {
+				background: orangered;
+			}
+			
+			#qht #dayi {
+				top: 50px;
+				left: 210px;
+				width: 800px;
+				height: 700px;
+				position: absolute;
+				overflow: hidden;
+			}
+			
+			#qht #dayi #qhul {
+				width: 4000px;
+				position: absolute;
+			}
+			
+			#qht #dayi #qhul li {
+				float: left;
+				list-style: none;
+			}
+			
+			#qht #dayi #qhul li img {
+				width: 800px !important;
+				height: 700px !important;
+			}
+			
+			#qht #yeshu {
+				top: 700px;
+				left: 1100px;
+				position: absolute;
+				font-size: 20px;
+			}
+			
+			#qitutu {
+				left: 40px;
+				top: 1150px;
+				width: 1200px;
+				height: 360px;
+				border: 1px solid gray;
+				position: absolute;
+			}
+			
+			#jingcai {
+				top: 1100px;
+				left: 40px;
+				color: forestgreen;
+				font-size: 25px;
+				position: absolute;
+			}
+			
+			#duo {
+				width: 80px;
+				height: 30px;
+				right: 25px;
+				top: 1100px;
+				cursor: pointer;
+				position: absolute;
+				border-radius: 15px;
+			}
+			
+			#qitutu div {
+				width: 270px;
+				height: 240px;
+				float: left;
+				border: 1px solid gray;
+				margin: 60px 14px;
+				overflow: hidden;
+			}
+			
+			#qitutu div img {
+				transition: 1s;
+			}
+			
+			#qitutu div img:hover {
+				transform: scale(1.1);
+			}
+			
+			#qitutu div p {
+				text-align: center;
+			}
+			
+			#didi {
+				top: 1600px;
+				width: 1280px;
+				height: 60px;
+				background: black;
+				position: absolute;
+			}
+			
+			#didi p {
+				line-height: 60px;
+				text-align: center;
+				font-size: 12px;
+				color: #FFFFFF;
+			}
+			#timu #sas{
+				display: block;
+				width: 1280px;
+				text-align: center;
+			}				
+			#diyige{
+				cursor: pointer;
+			}
+			#dierge{
+				cursor: pointer;
+			}
+			#disange{
+				cursor: pointer;
+			}
+			#disige{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="dade">
+			<div id="onexiao">
+				<img id="twlogo" src="../img/logo2017.gif" />
+				<ul id="hml">
+					<li id="Return">首页</li>
+					<li>新闻</li>
+					<li>攻略</li>
+					<li>游戏</li>
+					<li>图库</li>
+					<li>工具</li>
+					<li>商场</li>
+					<li>排行榜</li>
+				</ul>
+				<div id="liebiao">
+					<img id="lie" src="../img/32017.gif" />
+					<ul id="nml">
+						<li>2K18</li>
+						<li>机械纪元</li>
+						<li>绝地求生</li>
+						<li>H1Z1</li>
+						<li>极品飞车20</li>
+						<li>幽灵行动</li>
+						<li>孤岛惊魂5</li>
+						<li id="lastlis">黑暗之魂3</li>
+					</ul>
+				</div>
+			</div>
+			<div id="blue">
+				<span id="bone">图库</span><br />
+				<span>图库再多的文字描述都抵不过一张图片</span>
+				<img id="sous" src="../img/sub.png" />
+				<input type="text" placeholder="请输入搜索内容" />
+			</div>
+			<div id="hui">
+				<span id="sps"></span>
+			</div>
+			<div id="timu">
+				<span id="sas"></span>
+				<!--<span id="zuozhe"></span>-->
+				<ul id="tiul">
+					<li>
+						<img src="../img/z1.gif" />
+						<p>2017-11-07</p>
+					</li>
+					<li>
+						<img src="../img/z2.gif" />
+						<p>来源：网络</p>
+					</li>
+					<li>
+						<img src="../img/z3.gif" />
+						<p>作者：cn曜清</p>
+					</li>
+					<li>
+						<img src="../img/z4.gif" />
+						<p> 评论：383</p>
+					</li>
+				</ul>
+			</div>
+			<div id="qht">
+				<img id="lefbtn" src="../img/icon_left.png" />
+				<img id="rigbtn" src="../img/icon_right.png" />
+				<div id="dayi">
+					<ul id="qhul">
+						<li id="li1">
+							<img />
+						</li>
+						<li id="li2">
+							<img />
+						</li>
+						<li id="li3">
+							<img />
+						</li>
+						<li id="li4">
+							<img />
+						</li>
+						<li></li>
+					</ul>
+				</div>
+				<p id="yeshu"><span id="spp">1</span> /4页</p>
+			</div>
+			<p id="jingcai">精彩图库</p>
+			<button id="duo">更多 +</button>
+			<div id="qitutu">
+				<div>
+					<img id="diyige" src="../img/e540285e07964cdbf4375ee16d9d57b5 (1).jpg" />
+					<p>王者荣耀娜可露露COSPLAY</p>
+				</div>
+				<div>
+					<img id="dierge" src="../img/83685516c9a9dbd9a99121ef40db4cbd.jpg" />
+					<p>悲伤的优雅 巫师3爱丽丝唯美cos</p>
+				</div>
+				<div>
+					<img id="disange" src="../img/0995351455cd89fc4234bf47120355b3.jpg" />
+					<p>冰雪奇缘cos</p>
+				</div>
+				<div>
+					<img id="disige" src="../img/189c78911c716ec542aa0abb3b885b81.jpg" />
+					<p>《梦幻西游》cosplay</p>
+				</div>
+			</div>
+			<div id="didi">
+				<p>Copyright © 2002-2017 07073游戏网版权所有 关于我们 | 招聘信息 | 联系我们 | 网站地图 | 友情链接 | 厂商自助后台 商务电话：400-66-07073</p>
+			</div>
+		</div>
+		<script src="jquery-2.1.0.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$.ajax({
+				type: "get",
+				url: "../file/new_file.json",
+				async: true,
+				dataType: 'Text',
+				data: {},
+				success: function(ajax) {
+					var ajax = JSON.parse(ajax);
+					var href = decodeURI(location.href);//获取当前的url
+					var hrefArr = href.split("?");//通过？切分
+					var imgId = hrefArr[1].split("=")[1];//找到id
+					$("#sps").html(ajax[imgId]['ser']);
+					$("#sas").html(ajax[imgId]['syi']);
+					$("#li1 img").eq(0).attr({src: ajax[imgId]["img"]});
+					$("#li2 img").eq(0).attr({src: ajax[imgId]["img1"]});
+					$("#li3 img").eq(0).attr({src: ajax[imgId]["img2"]});
+					$("#li4 img").eq(0).attr({src: ajax[imgId]["img3"]});
+					var num = 0;
+					var cemt = 1;
+					var cloneimg = $('#qhul li').eq(0).clone();
+					$('#qhul').append(cloneimg);
+					var len = $('#qhul img').length;
+					//左切换
+					$("#lefbtn").click(function() {
+						num--;
+						moved();
+					})
+					//右切换
+					$("#rigbtn").click(function() {
+						num++;
+						moved();
+					})
+
+					function moved() {
+						if(num < 0) {
+							num = len - 2;
+							$("#qhul").css("left", -(len - 1) * 800);
+						}
+						if(num > len - 1) {
+							num = 1;
+							$("#qhul").css("left", 0)
+						}
+						$("#qhul").stop().animate({
+							"left": -num * 800
+						}, 500);
+						cemt = num+1;
+						if(cemt>4){
+							cemt = 1;
+						}else{
+						}
+						$("#spp").html(cemt)
+					}
+
+				}
+
+			});
+			//jq吸顶
+				$(window).scroll(function() {
+					var scrollY = document.body.scrollTop||document.documentElement.scrollTop;
+					if(scrollY > 45 && scrollY<800){
+						
+						$('#onexiao').slideUp()
+					}else{
+						$('#onexiao').slideDown()
+					}
+				})
+			//跳转
+				$("#diyige").click(function(){
+						location.href = "shujutu.html?id="+ this.id;
+				})
+				$("#dierge").click(function(){
+						location.href = "shujutu.html?id="+ this.id;
+				})
+				$("#disange").click(function(){
+						location.href = "shujutu.html?id="+ this.id;
+				})
+				$("#disige").click(function(){
+						location.href = "shujutu.html?id="+ this.id;
+				})
+				//返回首页
+				$("#Return").click(function(){
+						location.href = "../index.html";
+				})
+		</script>
+	</body>
+
+</html>
